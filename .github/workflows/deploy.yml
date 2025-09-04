@@ -18,7 +18,7 @@ jobs:
         run: dotnet workload install wasm-tools
       # Publish the Blazor project
       - name: Publish
-        run: dotnet publish BlazorApp5.csproj -c Release -o release -p:GHPages=true
+        run: dotnet publish BlazorApp5/BlazorApp5.csproj -c Release -o release -p:GHPages=true
       # Update base href to match GitHub Pages repository path
       - name: Rewrite base href
         uses: SteveSandersonMS/ghaction-rewrite-base-href@v1
