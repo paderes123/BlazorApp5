@@ -75,19 +75,38 @@ a, .btn-link {
     margin: 20vh auto 1rem auto;
 }
 
-    .loading-progress circle {
-        fill: none;
-        stroke: #e0e0e0;
-        stroke-width: 0.6rem;
-        transform-origin: 50% 50%;
-        transform: rotate(-90deg);
-    }
+.loading-progress circle {
+    fill: none;
+    stroke: #e0e0e0;
+    stroke-width: 0.6rem;
+    transform-origin: 50% 50%;
+    transform: rotate(-90deg);
+}
 
-        .loading-progress circle:last-child {
-            stroke: #1b6ec2;
-            stroke-dasharray: calc(3.141 * var(--blazor-load-percentage, 0%) * 0.8), 500%;
-            transition: stroke-dasharray 0.05s ease-in-out;
-        }
+.loading-progress circle:last-child {
+    stroke: #1b6ec2;
+    stroke-dasharray: calc(3.141 * var(--blazor-load-percentage, 0%) * 0.8), 500%;
+    transition: stroke-dasharray 0.05s ease-in-out;
+}
+
+.glow-button {
+    background-color: #6200ea; /* Purple base */
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.3s;
+    box-shadow: 0 0 10px #6200ea, 0 0 20px #6200ea, 0 0 30px #6200ea;
+}
+
+.glow-button:hover {
+    background-color: #7b1fa2;
+    box-shadow: 0 0 20px #7b1fa2, 0 0 40px #7b1fa2, 0 0 60px #7b1fa2;
+}
+
 
 .loading-progress-text {
     position: absolute;
